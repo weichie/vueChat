@@ -1,10 +1,12 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 
-import chatStore from './components/chatStore'
+import chatStore from './modules/chatStore'
 
 Vue.use(Vuex);
 
-export const store = new Vuex.Store({
-	chatStore
+export default new Vuex.Store({
+    modules: {
+        chatStore
+    }
 });
