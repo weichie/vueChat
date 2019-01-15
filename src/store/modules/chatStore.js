@@ -1,5 +1,5 @@
 const state = {
-	testState: 'Heyaaa'
+	title: 'Chatlist'
 };
 
 const mutations = {
@@ -11,7 +11,7 @@ const actions = {
 }
 
 const getters = {
-	gettestState: state => state.testState
+	getChatTitle: state => state.title
 }
 
 export default {

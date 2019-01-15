@@ -1,5 +1,5 @@
 <template>
-	<header>
+	<header class="main-header">
 		<nav class="navbar is-primary" role="navigation" aria-label="main navigation">
 			<div class="navbar-brand">
 				<router-link class="navbar-item" to="/">

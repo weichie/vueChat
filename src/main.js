@@ -11,8 +11,8 @@ import './assets/style.css'
 Vue.use(VueRouter);
 
 const router = new VueRouter({
-  mode: 'history',
-  routes
+	mode: 'history',
+	routes
 });
 
 new Vue({

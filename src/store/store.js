@@ -6,7 +6,7 @@ import chatStore from './modules/chatStore'
 Vue.use(Vuex);
 
 export default new Vuex.Store({
-    modules: {
-        chatStore
-    }
+	modules: {
+		chatStore
+	}
 });
