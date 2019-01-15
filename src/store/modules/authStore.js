@@ -1,7 +1,6 @@
-import axios from 'axios'
-
 const state = {
-	title: 'Chatlist'
+	fullName: 'Bob Weichler',
+	username: 'Weichie'
 };
 
 const mutations = {
@@ -10,7 +9,7 @@ const mutations = {
 
 const actions = {
 
-}
+};
 
 export default {
 	state,
