@@ -51,7 +51,7 @@
 					date: `${dd}/${mm}/${yyyy}`
 				}
 				axios.post('https://vuechat-952ec.firebaseio.com/chats.json', formData)
-					.then(res => console.log(res))
+					.then(res => this.chatMessage = '')
 					.catch(err => console.error(err));
 			}
 		}

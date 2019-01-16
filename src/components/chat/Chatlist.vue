@@ -1,9 +1,9 @@
 <template>
 	<ul class="chatlist">
-		<li>
-			<small>15/01</small>
+		<li v-for="(chat, i) in chatList" :key="'chat_' + i">
+			<small>{{chat[1]}}</small>
 			<strong>Weichie</strong>
-			<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis praesentium aliquam nemo, enim cupiditate eius quasi et autem blanditiis sed quia.</span>
+			<span>{{chat[0]}}</span>
 		</li>
 	</ul>
 </template>
@@ -14,12 +14,17 @@
 	export default{
 		data(){
 			return{
-				
+				chatList: []
 			}
 		},
 		created(){
-			axios.get('https://vuechat-952ec.firebaseio.com/users.json')
-				.then(res => console.log(res))
+			axios.get('https://vuechat-952ec.firebaseio.com/chats.json')
+				.then(res => {
+					const data = res.data;
+					Object.values(data).map(chat => {
+						this.chatList.push([chat.chat, chat.date]);
+					})
+				})
 				.catch(err => console.error(err));
 		}
 	}
