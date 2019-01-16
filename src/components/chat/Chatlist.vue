@@ -9,11 +9,18 @@
 </template>
 
 <script>
+	import axios from 'axios'
+
 	export default{
 		data(){
 			return{
 				
 			}
+		},
+		created(){
+			axios.get('https://vuechat-952ec.firebaseio.com/users.json')
+				.then(res => console.log(res))
+				.catch(err => console.error(err));
 		}
 	}
 </script>
